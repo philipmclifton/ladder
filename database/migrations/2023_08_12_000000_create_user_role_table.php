@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('user_role', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignUuid('user_id');
             $table->string('role')->nullable();
             $table->timestamps();
         });
